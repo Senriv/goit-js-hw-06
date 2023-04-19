@@ -7,4 +7,7 @@ refs.input.addEventListener("input", onChangeName);
 
 function onChangeName(event) {
   refs.nameLabel.textContent = event.currentTarget.value;
+  if (event.currentTarget.value.trim() === '') {
+    refs.nameLabel.textContent = 'Anonymous';
+  }
 }
